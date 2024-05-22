@@ -1,0 +1,20 @@
+---
+- hosts: mygroup
+  tasks:
+    - name: create directory
+      file:
+        name:  "{{work_dir}}/dir"
+        state: directory
+    - name: write my my_list 
+      lineinfile:
+        path: "{{work_dir}}/xyz.txt"
+        create: yes
+        line: "{{ my_list }}"
+    - name: list of my content
+      command: ls -l "{{ multi_var['my_path'] }}"
+      register: list_output    
+
+    - name: write a file from command module
+      copy: 
+        content: "{{ list_output }}"
+        dest: "{{work_dir}}/my_list.txt"
