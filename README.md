@@ -38,7 +38,8 @@ ansible all -m ansible.builtin.file -a "dest=/home/ubuntu/a.txt state=touch"
   vim playbook.yaml
 ```
 ansible-playbook playbook.yaml
- ansible all -a "ls"
- vim nginx.yaml
+```
+ansible all -a "ls"
+```
  ansible-playbook nginx.yaml
 
