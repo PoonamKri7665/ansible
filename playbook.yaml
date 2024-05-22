@@ -1,0 +1,14 @@
+---
+- name: Directory
+  hosts: mygroup
+  become: true   # priviledge as sudo
+
+  tasks:
+    - name: make a Directory
+      #command: mkdir /home/ubuntu/poonam
+      file:
+        path: /home/ubuntu/poonam
+        state: directory
+                                                                                                                                             
+                                                                                                                                            
+                                
