@@ -7,16 +7,15 @@ sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible –y
 ```
-ssh-keygen -t # to generate key  
+ssh-keygen -t  # to generate key  
 copy the public key to the hosts for performing ssh between the host and master.
 ```
-depending on ubuntu version ansible directory is created if ansible directory is not created then create one and create one file host and add the ip of nodes
-```
+# depending on ubuntu version ansible directory is created if ansible directory is not created then create one and create one file host and add the ip of nodes
 cd /etc
 sudo mkdir ansible
 cd ansible
 sudo vim hosts     # create inventory for host either separate or in groups
- ```
+```
 ansible inventory-name -m ping  #to check connection between master and hosts
 ```
 ansible worker1 -a "mkdir ansible_test" # create directory in inventory worker1
