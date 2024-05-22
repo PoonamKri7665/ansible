@@ -1,7 +1,7 @@
 ## ansible
 sudo apt-get install ansible –y
 ```
-if ansible repo not on ubuntu version
+# if ansible repo not on ubuntu version
 sudo apt-get update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
@@ -13,9 +13,9 @@ copy the public key to the hosts for performing ssh between the host and master.
 depending on ubuntu version ansible directory is created if ansible directory is not created then create one and create one file host and add the ip of nodes
 ```
 cd /etc
- sudo mkdir ansible
- cd ansible
- sudo vim hosts # create inventory for host either separate or in groups
+sudo mkdir ansible
+cd ansible
+sudo vim hosts     # create inventory for host either separate or in groups
  ```
 ansible inventory-name -m ping  #to check connection between master and hosts
 ```
