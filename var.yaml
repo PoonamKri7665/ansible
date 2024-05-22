@@ -1,0 +1,10 @@
+work_dir: /home/ubuntu/ansible
+
+my_list:
+- hello
+- mysql
+- apache2
+
+multi_var:
+my_path: /home/ubuntu/ansible/pk
+xyz: hello
