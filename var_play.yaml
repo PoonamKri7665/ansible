@@ -5,16 +5,16 @@
       file:
         name:  "{{work_dir}}/dir"
         state: directory
-    - name: write my my_list 
+    - name: write my my_list
       lineinfile:
         path: "{{work_dir}}/xyz.txt"
         create: yes
         line: "{{ my_list }}"
     - name: list of my content
       command: ls -l "{{ multi_var['my_path'] }}"
-      register: list_output    
+      register: list_output
 
     - name: write a file from command module
-      copy: 
-        content: "{{ list_output }}"
+      copy:
+        content: "{{ list_output.stdout_lines  | join('\n') }}" # to list the content in separate lines 
         dest: "{{work_dir}}/my_list.txt"
