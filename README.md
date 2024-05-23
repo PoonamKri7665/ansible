@@ -42,4 +42,7 @@ ansible-playbook playbook.yaml
 ansible all -a "ls"
 ```
  ansible-playbook nginx.yaml
+ ```
+ansible-playbook var_play.yaml -e @var.yaml
+
 
