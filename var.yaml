@@ -6,5 +6,6 @@ my_list:
 - apache2
 
 multi_var:
-my_path: /home/ubuntu/ansible/pk
-xyz: hello
+  my_path: /home/ubuntu/ansible/
+  xyz: hello
+
