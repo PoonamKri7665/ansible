@@ -1,0 +1,18 @@
+---
+- name: run httpd
+  hosts: mygroup
+  become: yes
+
+  tasks:
+  - name: install apache
+    when: ansible_os_family == "Debian"
+    apt: 
+      update_cache: yes
+      name: apache2
+      state: present 
+  - name: install apache
+    when: ansible_os_family == "Debian"
+    yum: 
+      update_cache: yes
+      name: apache2
+      state: present    
